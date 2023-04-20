@@ -24,9 +24,30 @@ More detailed notes to come.
 
 1) To start, git clone this directory and add it to your python path. 
 
-2) To combine two or more filterbank files, run:
+2) To combine two or more filterbank files, in, e.g., ipython, import the combination software:
 
 ```
-from Incoherent_9 import CombineFils
+>from Incoherent_9 import CombineFils
 ```
+
+3) Declare your clipping inputs, e.g.:
+
+```
+>mode = 'i' #the method for incoherently combining dishes
+>outname = 'output_file.fil' #the name of the output filterbank file
+>outloc = '/my/output/location/' #the directory in which to place the output file
+>bitswap = False #keep the output filterbank file the same bit rate as the input file
+>rficlip = False #legacy option. Always keep as false
+>clipsig = 3.
+>fil_names = ['fil_1.fil','fil_2.fil','fil_3.fil'] #filterbank files to be incoherently combined.
+```
+
+Note: Clipping modes can be `'i'` (incoherent), `'m'` (median) or `'mf'` (median filter). For more information, see thesis documentation: https://research.manchester.ac.uk/en/studentTheses/localising-fast-transients
+
+4) Run `CombineFils()`, e.g.:
+
+```
+>CombineFils(mode,outname,outloc,bitswap,rficlip,clipsig,fil_names)
+``` 
+
 
