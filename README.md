@@ -30,7 +30,7 @@ More detailed notes to come.
 >from Incoherent_9 import CombineFils
 ```
 
-3) Declare your clipping inputs, e.g.:
+3) Declare your combination inputs, e.g.:
 
 ```
 >mode = 'i' #the method for incoherently combining dishes
@@ -42,7 +42,7 @@ More detailed notes to come.
 >fil_names = ['fil_1.fil','fil_2.fil','fil_3.fil'] #filterbank files to be incoherently combined.
 ```
 
-Note: Clipping modes can be `'i'` (incoherent), `'m'` (median) or `'mf'` (median filter). For more information, see thesis documentation: https://research.manchester.ac.uk/en/studentTheses/localising-fast-transients
+Note: Combination modes can be `'i'` (incoherent), `'m'` (median) or `'mf'` (median filter). For more information, see thesis documentation: https://research.manchester.ac.uk/en/studentTheses/localising-fast-transients
 
 4) Run `CombineFils()`, e.g.:
 
